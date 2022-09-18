@@ -15,5 +15,8 @@ public class TestBook {
         System.out.println(book.toString());
         System.out.println("The first book is: "+book.First());
         System.out.println("The last book is: "+book.Last());
+        book.Sort();
+        System.out.println("Books after sort: ");
+        System.out.println(book.toString());
     }
 }

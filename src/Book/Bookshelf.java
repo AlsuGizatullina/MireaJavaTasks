@@ -3,10 +3,12 @@ package Book;
 import Dog.Dog;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Bookshelf {
-    private final List<Book> arr = new ArrayList<>();
+    private List<Book> arr = new ArrayList<>();
     private int count;
 
     @Override
@@ -50,9 +52,6 @@ public class Bookshelf {
     }
 
     public void Sort(){
-        for (var book : arr){
-            System.out.println(First());
-            System.out.println(Last());
-        }
+        arr = arr.stream().sorted(Comparator.comparingInt(Book::getAge)).collect(Collectors.toList());
     }
 }
