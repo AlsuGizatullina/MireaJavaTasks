@@ -32,4 +32,14 @@ public class Circle {
                 ", radius=" + radius +
                 '}';
     }
+
+    public double Square(){
+        return 3.14*getRadius()* getRadius();
+    }
+
+    public double Length(){
+        return 2*3.14*getRadius();
+    }
+
+
 }
